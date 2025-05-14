@@ -1,0 +1,23 @@
+[project]
+name = "retro-game-crew"
+version = "0.1.0"
+description = "Retro game creation crew powered by crewAI"
+authors = [{ name = "Henrik Kurelid", email = "henrik@kurelid.se" }]
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "crewai[tools]>=0.119.0,<1.0.0"
+]
+
+[project.scripts]
+retro-game-crew = "retro_game_crew.main:run"
+run_crew = "retro_game_crew.main:run"
+train = "retro_game_crew.main:train"
+replay = "retro_game_crew.main:replay"
+test = "retro_game_crew.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"

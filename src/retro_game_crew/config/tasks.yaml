@@ -1,0 +1,65 @@
+research_task:
+  description: >
+    You will research everything there is to know about the retro game "{gamename}".
+    You will look for information about the game, including but not limited to:
+      - its mechanics
+      - what controls that are used for the game,
+      - how score is calculated and displayed on screen
+      - how the game is won or lost
+      - what information that is displayed on screen
+      - what graphics are used
+      - what story is used
+      - what characters are used
+      - what sounds are used
+      - what music is used
+    The most important things to include are {important_things}.
+  expected_output: >
+    A long and extensive description of the game, including but not limited to:
+      - its mechanics
+      - what controls that are used for the game,
+      - how score is calculated and displayed on screen
+      - how the game is won or lost
+      - what information that is displayed on screen
+      - what graphics are used
+      - what story is used
+      - what characters are used
+      - what sounds are used
+      - what music is used
+
+code_task:
+  description: >
+    You will create a retro game using python that implements the researched mechanics, graphics, story and characters.
+    You will use the information you found in the research task to create a game that is fun to play and has a good user experience.
+    You will also use the information you found in the research task to create a game that is easy to maintain and extend.
+    The most important things to implement are {important_things}.
+  expected_output: >
+    Your Final answer must be the full python code, only the python code and nothing else.
+  context:
+    - research_task
+
+review_task:
+  description: >
+    You will create a retro game using python that implements the researched mechanics, graphics, story and characters.
+    You will use the information you found in the research task to create a game that is fun to play and has a good user experience.
+    You will also use the information you found in the research task to create a game that is easy to maintain and extend.
+    The most important things to implement are {important_things}.
+    Using the code you got, check for errors. Check for logic errors,
+    syntax errors, missing imports, variable declarations, mismatched brackets,
+    and security vulnerabilities.
+  expected_output: >
+    Your Final answer must be the full python code, only the python code and nothing else.
+  context:
+    - research_task
+
+evaluate_task:
+  description: >
+    You will create a retro game using python that implements the researched mechanics, graphics, story and characters.
+    You will use the information you found in the research task to create a game that is fun to play and has a good user experience.
+    You will also use the information you found in the research task to create a game that is easy to maintain and extend.
+    The most important things to implement are {important_things}.
+    You will look over the code to insure that it is complete and
+    does the job that it is supposed to do.
+  expected_output: >
+    Your Final answer must be the full python code, only the python code and nothing else.
+  context:
+    - research_task
