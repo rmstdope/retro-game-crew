@@ -7,9 +7,15 @@ from retro_game_crew.crew import GameBuilderCrew
 def run():
     inputs = {
         # 'gamename' : 'pong',
-        # 'important_things' : 'that vertical blank sync is enabled and that it is possible to play against a smart computer player',
-        'gamename' : 'tetris',
-        'important_things' : 'that vertical blank sync is enabled and that the game can be won by clearing all lines',
+        # 'important_things' : 'that vertical blank sync is enabled and that it is possible to play against a not too smart computer player',
+        # 'gamename' : 'tetris',
+        # 'important_things' : 'that vertical blank sync is enabled and that the game can be won by clearing all lines',
+        # 'gamename' : 'snake',
+        # 'important_things' : 'that vertical blank sync is enabled and that the score is always visible on screen',
+        # 'gamename' : 'text adventure',
+        # 'important_things' : 'that there are at least 5 diffferent rooms and there is a way to win the game',
+        'gamename' : 'tic-tac-toe',
+        'important_things' : 'that the game is controlled using the arrow keys',
     }
 
     game= GameBuilderCrew().crew().kickoff(inputs=inputs)
