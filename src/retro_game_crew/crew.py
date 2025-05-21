@@ -12,30 +12,30 @@ class GameBuilderCrew:
     @agent
     def game_researcher_agent(self) -> Agent:
         return Agent(
-            config=self.agents_config['game_researcher_agent'],
+            config=self.agents_config['game_researcher'],
             allow_delegation=False,
             verbose=True
         )
     
-    def senior_engineer_agent(self) -> Agent:
+    def hardcore_hacker_agent(self) -> Agent:
         return Agent(
-            config=self.agents_config['senior_engineer_agent'],
-            allow_delegation=False,
-            verbose=True
-        )
-    
-    @agent
-    def qa_engineer_agent(self) -> Agent:
-        return Agent(
-            config=self.agents_config['qa_engineer_agent'],
+            config=self.agents_config['hardcore_hacker'],
             allow_delegation=False,
             verbose=True
         )
     
     @agent
-    def chief_qa_engineer_agent(self) -> Agent:
+    def validation_engineer_agent(self) -> Agent:
         return Agent(
-            config=self.agents_config['chief_qa_engineer_agent'],
+            config=self.agents_config['validation_engineer'],
+            allow_delegation=False,
+            verbose=True
+        )
+    
+    @agent
+    def verification_engineer_agent(self) -> Agent:
+        return Agent(
+            config=self.agents_config['verification_engineer'],
             allow_delegation=True,
             verbose=True
         )
@@ -44,7 +44,7 @@ class GameBuilderCrew:
     @task
     def research_task(self) -> Task:
         return Task(
-            config=self.tasks_config['research_task'],
+            config=self.tasks_config['game_research'],
             agent=self.game_researcher_agent(),
             output_file='output/research.txt'
         )
@@ -52,29 +52,27 @@ class GameBuilderCrew:
     @task
     def code_task(self) -> Task:
         return Task(
-            config=self.tasks_config['code_task'],
-            agent=self.senior_engineer_agent(),
+            config=self.tasks_config['coding'],
+            agent=self.hardcore_hacker_agent(),
             output_file='output/game.py'
         )
 
     @task
-    def review_task(self) -> Task:
+    def validation_task(self) -> Task:
         return Task(
-            config=self.tasks_config['review_task'],
-            agent=self.qa_engineer_agent(),
-            #### output_json=ResearchRoleRequirements
+            config=self.tasks_config['validate'],
+            agent=self.validation_engineer_agent(),
         )
 
     @task
-    def evaluate_task(self) -> Task:
+    def verification_task(self) -> Task:
         return Task(
-            config=self.tasks_config['evaluate_task'],
-            agent=self.chief_qa_engineer_agent(),
+            config=self.tasks_config['verify'],
+            agent=self.verification_engineer_agent(),
         )
 
     @crew
     def crew(self) -> Crew:
-        """Creates the GameBuilderCrew"""
         return Crew(
             agents=self.agents,  # Automatically created by the @agent decorator
             tasks=self.tasks,  # Automatically created by the @task decorator
