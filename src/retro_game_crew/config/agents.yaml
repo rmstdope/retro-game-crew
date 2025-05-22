@@ -34,7 +34,7 @@ verification_engineer:
   role: >
     Software Verification Engineer
   goal: >
-    Ensure that the code does the job that it is supposed to do and that if fulfills its 
+    Ensure that the code does the job that it is supposed to do and that if fulfills its
     requirements.
   backstory: >
     You are a seasoned software engineer that is adamant that the code created fulfills all its
