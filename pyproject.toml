@@ -5,7 +5,8 @@ description = "Retro game creation crew powered by crewAI"
 authors = [{ name = "Henrik Kurelid", email = "henrik@kurelid.se" }]
 requires-python = ">=3.10,<3.13"
 dependencies = [
-    "crewai[tools]>=0.11.0,<1.0.0"
+    "crewai==0.119.0",
+    "crewai-tools==0.44.0"
 ]
 
 [project.scripts]
