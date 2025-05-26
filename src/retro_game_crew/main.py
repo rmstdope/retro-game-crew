@@ -13,7 +13,7 @@ def run():
         # 'gamename' : 'snake',
         # 'important_things' : 'that vertical blank sync is enabled, that the current score is always visible on screen and that when you die, your score is shown and you get the option to play again',
         'gamename' : 'text adventure',
-        'important_things' : 'that there are at least 5 diffferent rooms and there is a way to win the game',
+        'important_things' : 'that there are at least 5 different rooms and there is a way to win the game',
         # 'gamename' : 'tic-tac-toe',
         # 'important_things' : 'that the game is controlled using the arrow keys',
         # 'gamename' : 'super mario bros',

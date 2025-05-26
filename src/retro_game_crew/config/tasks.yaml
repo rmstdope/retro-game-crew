@@ -22,7 +22,7 @@ coding:
     You will also use the information you found in the research task to create a game that is easy to maintain and extend.
     The most important things to implement are {important_things}.
   expected_output: >
-    Your Final answer must be the full python code, only the python code and nothing else.  The format should be a python file.
+    Your Final answer must be the full python code, only the python code and nothing else.  The format should be plain text, no markup.
   context:
     - research_task
 
@@ -32,7 +32,7 @@ validate:
     syntax errors, missing imports, variable declarations, mismatched brackets,
     and security vulnerabilities.
   expected_output: >
-    Your Final answer must be the full python code, only the python code and nothing else.  The format should be a python file.
+    Your Final answer must be the full python code, only the python code and nothing else.  The format should be plain text, no markup
   context:
     - research_task
 
@@ -42,6 +42,6 @@ verify:
     does the job that it is supposed to do.
     Ensure that it matches the researched game and specifically that {important_things} are implemented.
   expected_output: >
-    Your Final answer must be the full python code, only the python code and nothing else.  The format should be a python file.
+    Your Final answer must be the full python code, only the python code and nothing else.  The format should be plain text, no markup
   context:
     - research_task
