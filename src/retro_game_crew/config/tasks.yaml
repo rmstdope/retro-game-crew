@@ -14,6 +14,8 @@ game_research:
       - what music is used
   expected_output: >
     A long and extensive description of the game
+  markdown: true
+  output_file: output/research.md
 
 coding:
   description: >
@@ -22,9 +24,11 @@ coding:
     You will also use the information you found in the research task to create a game that is easy to maintain and extend.
     The most important things to implement are {important_things}.
   expected_output: >
-    Your Final answer must be the full python code, only the python code and nothing else.  The format should be plain text, no markup.
+    Your Final answer must be the full python code, only the python code and nothing else.  The format should be plain text, no mark down.
   context:
     - research_task
+  markdown: false
+  output_file: output/game.py
 
 validate:
   description: >
@@ -32,9 +36,10 @@ validate:
     syntax errors, missing imports, variable declarations, mismatched brackets,
     and security vulnerabilities.
   expected_output: >
-    Your Final answer must be the full python code, only the python code and nothing else.  The format should be plain text, no markup
+    Your Final answer must be the full python code, only the python code and nothing else.
   context:
     - research_task
+  markdown: false
 
 verify:
   description: >
@@ -42,6 +47,7 @@ verify:
     does the job that it is supposed to do.
     Ensure that it matches the researched game and specifically that {important_things} are implemented.
   expected_output: >
-    Your Final answer must be the full python code, only the python code and nothing else.  The format should be plain text, no markup
+    Your Final answer must be the full python code, only the python code and nothing else.
   context:
     - research_task
+  markdown: false

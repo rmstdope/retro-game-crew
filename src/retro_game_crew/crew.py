@@ -34,6 +34,7 @@ class GameBuilderCrew:
             config=self.agents_config['game_researcher'],
             llm=self.researching_llm,
             allow_delegation=False,
+            # reasoning=True,
             verbose=True
         )
     
@@ -42,6 +43,7 @@ class GameBuilderCrew:
             config=self.agents_config['hardcore_hacker'],
             llm=self.hacking_llm,
             allow_delegation=False,
+            # reasoning=True,
             verbose=True
         )
     
@@ -51,6 +53,7 @@ class GameBuilderCrew:
             config=self.agents_config['validation_engineer'],
             llm=self.qa_llm,
             allow_delegation=False,
+            # reasoning=True,
             verbose=True
         )
     
@@ -60,6 +63,7 @@ class GameBuilderCrew:
             config=self.agents_config['verification_engineer'],
             llm=self.qa_llm,
             allow_delegation=True,
+            # reasoning=True,
             verbose=True
         )
     
@@ -69,7 +73,6 @@ class GameBuilderCrew:
         return Task(
             config=self.tasks_config['game_research'],
             agent=self.game_researcher_agent(),
-            output_file='output/research.txt'
         )
 
     @task
@@ -77,7 +80,6 @@ class GameBuilderCrew:
         return Task(
             config=self.tasks_config['coding'],
             agent=self.hardcore_hacker_agent(),
-            output_file='output/game.py'
         )
 
     @task
